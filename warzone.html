@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>𝘾𝘼𝙍𝙏𝙀𝙇 𝙈𝘼𝘿𝙍𝘼𝙕𝙊</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="img/cartel2.jpg" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/superslides.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="slides">
+        <div class="overlay"></div>
+        <div class="slides-container">
+            <img src="img/cartel.jpg" alt="" />
+            <img src="img/cartel.jpg" alt="" />
+        </div>
+        <div class="titleMessage">
+            <div class="heading">
+                <div class="main-anim">
+                    <p class="main" style="color: #ffffff;">𝘾𝘼𝙍𝙏𝙀𝙇 𝙈𝘼𝘿𝙍𝘼𝙕𝙊</p>
+                    <h1>
+                        <a class="typewrite" data-period="3000" data-type='[ "Made by !Mak1s#0001" ]' style="font-size: 18px; top: 50px; color: rgb(255, 255, 255); ">
+                            <span class="wrap"></span>
+                        </a>
+                    </h1>
+                </div>
+                <div class="content">
+                    <a href="https://discord.gg/wav9c7sTYq" style="color: rgb(255, 255, 255);">
+                        <button class="btn btn4">Discord</button>
+                    </a>
+                    <a href="fivem:ip">
+                        <button class="btn btn4">APPLICATION</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <nav id="navigation" class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">𝘾𝘼𝙍𝙏𝙀𝙇 𝙈𝘼𝘿𝙍𝘼𝙕𝙊</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#about">𝘼𝙗𝙤𝙪𝙩 𝙐𝙨<span class="sr-only"></span
+                ></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">𝘾𝙤𝙣𝙩𝙖𝙘𝙩</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div id="about" class="section ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-5 ">
+                    <img class="aboutImage " src="img/cartel.jpg" alt="" />
+                </div>
+
+                <div class="col-md-7 ">
+                    <h4 class="about">
+                        <p>Καλησπέρα σε όλους σας</p>
+                        <p>Είμαστε ένα νέο Cartel στον Drip RolePlay ,</p>
+                        <p>ονομαζόμαστε Cartel Madrazo.</p>
+                        <p>Υπάρχουν στιγμές που παίζουμε σοβαρά και πρέπει να υπακούμε τα Bosses</p>
+                        <p>και άλλες που chillάρουμε και παίζουμε διάφορα games μαζί.</p>
+                        <p>Κύριος σκοπός είναι η διασκέδαση , και όχι το tryhard !</p>
+                        <p>Αν θέλετε να μπείτε στην ομάδα μας , μπείτε στο discord server μας και κάντε μια αίτηση.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="contact" class="contactSection section ">
+        <div class="col-md-12 text-center ">
+            <h2>Ενδιαφέρεστε να μπείτε στην οργάνωση μας?</h2>
+            <a href="https://discord.gg/wav9c7sTYq" style="color: black;" class="contactButton">Επικοινωνήστε μαζί μας</a>
+        </div>
+    </div>
+
+    <div class="copyrightSection ">
+        <div class="col-md-12 text-center ">
+            <p>
+                copyright &copy; 2021 - 2022 all rights reserved.
+            </p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 3000,
+            once: true,
+        });
+    </script>
+
+    <script>
+        var TxtType = function(el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function() {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap ">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) {
+                delta /= 2;
+            }
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function() {
+                that.tick();
+            }, delta);
+        };
+        window.onload = function() {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            var css = document.createElement("style ");
+            css.type = "text/css ";
+            css.innerHTML = ".typewrite> .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.8.2/countUp.min.js "></script>
+    <script src="js/countUp-jquery.js "></script>
+    <script src="js/jquery.superslides.min.js "></script>
+    <script src="js/owl.carousel.min.js "></script>
+    <script src="js/jquery.easypiechart.min.js "></script>
+    <script src="js/typed.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+    <script type="text/javascript " src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js "></script>
+    <script src=" "></script>
+    <script src="js/script.js "></script>
+</body>
+
+</html>
